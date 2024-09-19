@@ -15,10 +15,14 @@ public class CreateMessageActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_message);
+
         Intent intent = getIntent();
         String messageText = intent.getStringExtra(EXTRA_MESSAGE);
-        TextView messageView = (TextView)findViewById(R.id.message);
-        messageView.setText(messageText);
+
+        TextView receivedMessageView = (TextView) findViewById(R.id.receivedMessage);
+        if (messageText != null) {
+            receivedMessageView.setText(messageText);
+        }
     }
 
     public void onSendMessage(View view){
