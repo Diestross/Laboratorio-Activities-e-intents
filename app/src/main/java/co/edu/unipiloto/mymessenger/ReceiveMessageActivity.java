@@ -28,6 +28,4 @@ public class ReceiveMessageActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-
 }
